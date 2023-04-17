@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}">
+    <link rel="stylesheet" href="../static/css/header.css" th:href="@{/css/header.css}">
+    <link rel="stylesheet" href="../static/css/footer.css" th:href="@{/css/footer.css}">
+    <title>Flower Details</title>
+</head>
+<body>
+<header th:replace="~{HeaderAndFooter::Header}">
+    <h1>Some header text</h1>
+</header>
+<main>
+    <h2>Flower</h2>
+    <p>
+        <span class="flower_label">Flower:</span>
+        <span class="flower_name" th:text="${flower.label}">Aster</span>
+        &nbsp;&nbsp;
+        <span class="flower_price" th:text="${#numbers.formatCurrency(flower.price)}">&dollar;2.99</span>
+    </p>
+    <p>
+        <img class='flower_image'
+            src='../static/images/flowers/aster_large.jpeg'
+            th:src="@{|/images/flowers/${flower.picture.large}|}"
+            alt="Aster"
+            th:alt="${flower.label}">
+    </p>
+    <p class="flower_info"
+        th:text="${flower.description}">
+        The name Aster comes from the Ancient Greek word meaning star,
+        referring to the shape of the flower head.
+    </p>
+    <p>Learn more at
+        <a href="https://en.wikipedia.org/wiki/Aster_(genus)"
+            th:href="${flower.wiki}">Wikipedia</a>
+    </p>
+    <p>
+        <a href="FlowerList.html"
+        th:href="@{/flower-list}">Flower List</a>
+    </p>
+</main>
+<footer th:replace="~{HeaderAndFooter::footer}">
+    Some footer text
+</footer>
+</body>
+</html>

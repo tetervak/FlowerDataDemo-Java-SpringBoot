@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}">
+    <link rel="stylesheet" href="../static/css/header.css" th:href="@{/css/header.css}">
+    <link rel="stylesheet" href="../static/css/footer.css" th:href="@{/css/footer.css}">
+    <title>Flower List</title>
+</head>
+<body>
+<header th:replace="~{HeaderAndFooter::Header}">
+    <h1>Some header text</h1>
+</header>
+<main>
+    <h2>Flower Catalog</h2>
+    <table>
+        <tr th:each="f: ${flowers}">
+            <td>
+                <a href="FlowerDetails.html"
+                   th:href="@{/flower-details/{id}(id=${f.id})}">
+                    <img class="thumb"
+                         src="../static/images/flowers/aster_small.jpeg"
+                         th:src="@{|/images/flowers/${f.picture.small}|}"
+                         alt="Aster"
+                         th:alt="${f.label}">
+                </a>
+            </td>
+            <td>
+                <span class="flower_label" th:text="${f.label}">Aster</span>&nbsp;&nbsp;
+                <span class="flower_price" th:text="${#numbers.formatCurrency(f.price)}">&dollar;2.99</span><br>
+                <span th:text="${f.description}">
+                    The name Aster comes from the Ancient Greek word meaning star,
+                    referring to the shape of the flower head."
+                </span><br/>
+                <a href="FlowerDetails.html"
+                   th:href="@{/flower-details/{id}(id=${f.id})}">More info</a>
+            </td>
+        </tr>
+    </table>
+</main>
+<footer th:replace="~{HeaderAndFooter::footer}">
+    Some footer text
+</footer>
+</body>
+</html>
