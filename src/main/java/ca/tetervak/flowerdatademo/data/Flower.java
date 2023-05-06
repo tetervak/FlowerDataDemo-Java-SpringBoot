@@ -1,4 +1,4 @@
-package ca.tetervak.flowerdata.data;
+package ca.tetervak.flowerdatademo.data;
 
 import jakarta.persistence.*;
 

@@ -1,13 +1,13 @@
-package ca.tetervak.flowerdata;
+package ca.tetervak.flowerdatademo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FlowerDataApplication {
+public class FlowerDataDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FlowerDataApplication.class, args);
+        SpringApplication.run(FlowerDataDemoApplication.class, args);
     }
 
 }

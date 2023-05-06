@@ -1,10 +1,10 @@
-package ca.tetervak.flowerdata;
+package ca.tetervak.flowerdatademo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FlowerDataApplicationTests {
+class FlowerDataDemoApplicationTests {
 
     @Test
     void contextLoads() {
