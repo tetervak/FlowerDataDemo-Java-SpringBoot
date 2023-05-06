@@ -12,11 +12,11 @@ import java.time.LocalDate;
 import java.util.NoSuchElementException;
 
 @Controller
-public class FlowerPageController {
+public class FlowerController {
 
     private final FlowerDataRepository repository;
 
-    public FlowerPageController(FlowerDataRepository repository) {
+    public FlowerController(FlowerDataRepository repository) {
         this.repository = repository;
     }
 
