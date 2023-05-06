@@ -1,8 +1,5 @@
-package ca.tetervak.flowerdata.data.init;
+package ca.tetervak.flowerdata.data;
 
-import ca.tetervak.flowerdata.data.jpa.Flower;
-import ca.tetervak.flowerdata.data.jpa.FlowerDataRepository;
-import ca.tetervak.flowerdata.data.jpa.Picture;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 

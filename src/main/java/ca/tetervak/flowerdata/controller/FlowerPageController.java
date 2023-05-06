@@ -1,6 +1,6 @@
 package ca.tetervak.flowerdata.controller;
 
-import ca.tetervak.flowerdata.data.jpa.FlowerDataRepository;
+import ca.tetervak.flowerdata.data.FlowerDataRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;

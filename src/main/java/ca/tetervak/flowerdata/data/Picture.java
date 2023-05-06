@@ -1,9 +1,8 @@
-package ca.tetervak.flowerdata.data.jpa;
+package ca.tetervak.flowerdata.data;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "picture")
 public class Picture {
 
     @Id

@@ -1,4 +1,4 @@
-package ca.tetervak.flowerdata.data.jpa;
+package ca.tetervak.flowerdata.data;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

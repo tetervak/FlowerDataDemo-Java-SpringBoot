@@ -1,11 +1,10 @@
-package ca.tetervak.flowerdata.data.jpa;
+package ca.tetervak.flowerdata.data;
 
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "flower")
 public class Flower {
 
     @Id
