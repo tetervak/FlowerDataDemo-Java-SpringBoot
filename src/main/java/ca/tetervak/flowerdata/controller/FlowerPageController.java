@@ -20,13 +20,13 @@ public class FlowerPageController {
         this.repository = repository;
     }
 
-    @GetMapping(value = {"/", "/flower-list"})
+    @GetMapping(value = {"/", "/flowers"})
     ModelAndView flowerList(){
         return new ModelAndView("FlowerList",
                 "flowers", repository.findAll());
     }
 
-    @GetMapping("/flower-details/{id}")
+    @GetMapping("/flowers/{id}")
     ModelAndView flowerDetails(@PathVariable String id){
         return new ModelAndView("FlowerDetails",
                 "flower",

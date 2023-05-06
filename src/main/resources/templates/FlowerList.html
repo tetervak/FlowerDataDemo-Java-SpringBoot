@@ -17,7 +17,7 @@
         <tr th:each="f: ${flowers}">
             <td>
                 <a href="FlowerDetails.html"
-                   th:href="@{/flower-details/{id}(id=${f.id})}">
+                   th:href="@{/flowers/{id}(id=${f.id})}">
                     <img class="thumb"
                          src="../static/images/flowers/aster_small.jpeg"
                          th:src="@{|/images/flowers/${f.picture.small}|}"
@@ -33,7 +33,7 @@
                     referring to the shape of the flower head."
                 </span><br/>
                 <a href="FlowerDetails.html"
-                   th:href="@{/flower-details/{id}(id=${f.id})}">More info</a>
+                   th:href="@{/flowers/{id}(id=${f.id})}">More info</a>
             </td>
         </tr>
     </table>
