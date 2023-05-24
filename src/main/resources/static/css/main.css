@@ -66,3 +66,9 @@ a:hover {
     font-weight: bolder;
     color: #ff9800;
 }
+
+p.message{
+    color: #ad1457;
+    font-weight: bolder;
+    font-style: oblique;
+}
